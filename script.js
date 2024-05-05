@@ -24,9 +24,29 @@
 
       </tr>`
 
+      var table = document.getElementById("table"), sum = 0;
+  // getting the tableID
+  function getSum(){
+    for(let i = 1; i < table.rows.length; i++){
+      //looping through the table rows
+           sum = sum + parseInt(table.rows[i].cells[4].innerHTML);
+            
+           //adding cell 4's row
+    }
+         
+     //diaplaying it
+  }
+  
+  getSum()
 
+  function getMonthy (){
+   let monthly = sum/ 12
+   document.getElementById("totalMonthly").innerHTML = "$  "+monthly.toFixed(2);
+     
    
+  }
 
+  getMonthy()
 
  }
 
@@ -35,24 +55,15 @@
    task.remove();
  }  
 
- let table = document.getElementById("table"), sumVal= 0;
-
-//  function totalMonthly(){
-
-//    for(var i = 1; i < table.rows.length; i++){
-//       sumVal = sumVal + parseFloat(table.rows[i].cells[4].innerHTML)
-//    }
-//    document.getElementById("totalMonthly").innerHTML = "$ "+sumVal.toFixed(2)
-//    //who sum here
-//     console.log("sum is", sumVal);       
-//   }
-
-  // totalMonthly()
-
-  
-  
-
  
+
+function onClickRemove(deleteButton) {
+  let row = deleteButton.parentElement.parentElement;
+  row.parentNode.removeChild(row);
+  updateSubTotal();
+}
+
+
 
   const formToReset = document.getElementById('form');
   //grabbing the form id 
@@ -67,3 +78,4 @@
      
   });
 
+  
