@@ -2,6 +2,17 @@
     // console.log("handleSubmit works...")
     event.preventDefault()
 
+    // function validate(){
+    //   var text1 = document.querySelector('input').value;
+      
+    //   if (text1 == ''){
+    //     alert("Must fill everything in");
+    //     return false;
+    //   }
+     
+    //   }
+
+    //   validate()
      
     let firstNameInput = document.getElementById("firstName").value 
     let lastNameInput = document.getElementById("lastName").value 
@@ -29,7 +40,7 @@
   function getSum(){
     for(let i = 1; i < table.rows.length; i++){
       //looping through the table rows
-           sum = sum + parseInt(table.rows[i].cells[4].innerHTML);
+           sum = sum + parseFloat(table.rows[i].cells[4].innerHTML);
            //adding cell 4's row
     }
          
@@ -51,7 +62,7 @@
   function exceedLimit(){
     let monthly = sum/ 12
     if (monthly >= 20000){
-    document.getElementById("exceedLimit").style.backgroundColor += 'red'
+    document.getElementById("exceedLimit").className += 'over-budget'
     }
   }
   exceedLimit()

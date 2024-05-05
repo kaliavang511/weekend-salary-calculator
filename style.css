@@ -29,7 +29,6 @@ table {
     background: #dcdcdc;
   }
 
-  .red
-  {
-    background-color: red;
+  .over-budget{
+    color:  red;
   }
