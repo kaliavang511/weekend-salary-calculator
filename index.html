@@ -11,7 +11,7 @@
     <h1>Salary Calculator</h1>
   </header>
   
-  <form onSubmit="handleSubmit(event)">
+  <form  id="form" onSubmit="handleSubmit(event)">
     <h2>Add Employee</h2>
     <input
     id ='firstName'
@@ -29,7 +29,7 @@
     <input
     id ='id'
     placeholder="ID"
-    type="text"
+    type="number"
     data-testid="idInput">
 
     <input
@@ -41,15 +41,16 @@
     <input
     id ='annualSalary'
     placeholder="Annual salary"
-    type="text"
+    type="number"
     data-testid="annualSalaryInput">
 
-    <button data-testid="submitButton"> submit </button>
+    <button type="submit" data-testid="submitButton"> submit </button>
   </form>
+  <p id ="output"> </p>
     <h2>Employees</h2>
 
     <section>
-      <table>
+      <table id="table" >
       <thead>
         <tr>
           <th>First Name</th>
@@ -65,8 +66,11 @@
       </table>
     </section>
 
-  <footer>
-    <p>Total Monthly</p>
+    
+
+  <footer >
+    <span>Total Monthly:</span>
+    <span id = totalMonthly ></span>
   </footer>
 </body>
 </html>
