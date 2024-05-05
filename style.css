@@ -28,3 +28,8 @@ table {
   tbody tr:nth-child(even){
     background: #dcdcdc;
   }
+
+  .red
+  {
+    background-color: red;
+  }

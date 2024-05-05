@@ -30,11 +30,10 @@
     for(let i = 1; i < table.rows.length; i++){
       //looping through the table rows
            sum = sum + parseInt(table.rows[i].cells[4].innerHTML);
-            
            //adding cell 4's row
     }
          
-     //diaplaying it
+
   }
   
   getSum()
@@ -48,6 +47,15 @@
 
   getMonthy()
 
+
+  function exceedLimit(){
+    let monthly = sum/ 12
+    if (monthly >= 20000){
+    document.getElementById("exceedLimit").style.backgroundColor += 'red'
+    }
+  }
+  exceedLimit()
+  
  }
 
  function deleteThis(event){
