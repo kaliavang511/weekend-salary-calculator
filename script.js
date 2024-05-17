@@ -30,11 +30,11 @@ let totalMonthlyValue = 0
   }
 
   renderTotalMonthly()
-  
+
   document.getElementById("form").reset()
 
   totalMonthlyValue += annualSalaryInput /12
-  renderTotalMonthly()
+  
   
 
 
